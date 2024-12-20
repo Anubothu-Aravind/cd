@@ -1,0 +1,52 @@
+
+lab 1 : Steps to Push Files from Local Repo to GitHub Repo
+________________________________________
+1. Create a Folder and Files
+•	Create a new folder: 
+•	mkdir <folder_name>
+•	Navigate into the folder: 
+•	cd <folder_name>
+•	Create files: 
+•	touch <file_name>
+•	Edit files using a text editor (e.g., Notepad): 
+•	notepad <file_name>
+________________________________________
+2. Stage Updated Files
+•	Use the git add command to move files to the staging area: 
+•	git add .
+________________________________________
+3. Commit the Changes
+•	Commit the staged changes with a message: 
+•	git commit -m "Your commit message"
+________________________________________
+4. Initialize the Repository
+•	If the repository isn’t already initialized, run: 
+•	git init
+________________________________________
+5. Add a Remote Repository
+•	Add the GitHub repository as a remote: 
+•	git remote add <remote_name> <repository_URL>
+Example: 
+git remote add origin https://github.com/YourUsername/YourRepo.git
+________________________________________
+6. Push the Changes
+•	Push changes to GitHub and set the remote branch as upstream: 
+•	git push --set-upstream <remote_name> <branch_name>
+Example: 
+git push --set-upstream origin master
+________________________________________
+7. Rename the Default Branch (Optional)
+•	Rename the branch from master to main (if needed): 
+•	git branch -m main
+________________________________________
+8. Verify the Changes
+•	Check the GitHub repository to confirm that files have been successfully uploaded.
+________________________________________
+Additional Commands
+•	View current branch and remote setup: 
+•	git branch -v
+•	git remote -v
+•	Remove files or directories: 
+•	rm <file_name>  # Remove file
+•	rm -r <directory_name>  # Remove directory
+________________________________________
