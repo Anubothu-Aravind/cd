@@ -1,0 +1,36 @@
+________________________________________
+Installing Terraform on Windows
+1. Prerequisites
+•	Ensure you have Administrator privileges.
+•	Install a command-line utility (like PowerShell or Command Prompt).
+________________________________________
+2. Download Terraform
+1.	Visit the Terraform Download Page.
+2.	Choose the appropriate version for Windows (64-bit).
+3.	Download the .zip file.
+________________________________________
+3. Extract the Files
+1.	Unzip the downloaded file using a tool like WinRAR or 7-Zip.
+2.	Move the extracted folder to a directory of your choice (e.g., C:\Terraform).
+________________________________________
+4. Update System PATH
+1.	Press Win + S and search for Environment Variables.
+2.	Click on Edit the system environment variables.
+3.	In the System Properties window, click on Environment Variables.
+4.	Under System Variables, locate the Path variable and select Edit.
+5.	Click New and add the path where Terraform is located (e.g., C:\Terraform).
+6.	Click OK to save changes.
+________________________________________
+5. Verify Installation
+1.	Open Command Prompt or PowerShell.
+2.	Type the following command: 
+3.	terraform -version
+4.	If installed correctly, Terraform’s version will be displayed.
+________________________________________
+6. Optional: Install Terraform via Package Manager
+•	If you have Chocolatey or Scoop, you can use them: 
+o	Chocolatey: 
+o	choco install terraform
+o	Scoop: 
+o	scoop install terraform
+________________________________________
