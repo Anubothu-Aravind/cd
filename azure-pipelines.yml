@@ -1,30 +1,55 @@
 trigger:
+
 - main
 
+
 pool:
+
+
   vmImage: 'ubuntu-latest'
 
+
+strategy:
+
+
+  matrix:
+
+
+    Python27:
+
+
+      python.version: '2.7'
+
+
+
 steps:
-# Step 1: Use the latest Python version
+
+
 - task: UsePythonVersion@0
+
+
   inputs:
-    versionSpec: '3.x'  # Use the latest stable Python 3 version
-  displayName: 'Set up Python 3.x'
 
-# Step 2: Upgrade pip and install dependencies (if required)
-- script: |
-    python -m pip install --upgrade pip
-    if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-  displayName: 'Upgrade pip and install dependencies'
 
-# Step 3: Run `test.py`
-- script: |
-    echo "Running test.py"
-    python test.py
-  displayName: 'Execute test.py'
+    versionSpec: '$(python.version)'
 
-# Step 4: Include a step to display the directory structure (for debugging, optional)
-- script: |
-    echo "Displaying directory structure:"
-    tree
-  displayName: 'Show directory structure'
+
+  displayName: 'Use Python $(python.version)'
+
+
+- script: python "add.py"
+
+
+
+- task: PythonScript@0
+
+
+  inputs:
+
+
+    scriptSource: 'inline'
+
+
+    script: |
+      print('AZURE PIPELINE')
+      print('CONTINUOUS INTEGRATION & CONTINUOUS DEPLOYMENT')
